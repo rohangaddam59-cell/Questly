@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questly</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="topbar">
+            <div class="brand">
+                <img src="assets/logo.svg" alt="Questly logo">
+                <div>
+                    <p class="eyebrow">Personal challenge engine</p>
+                    <h1>Questly</h1>
+                </div>
+            </div>
+            <div class="stats" aria-label="Progress stats">
+                <div><span id="xpValue">0</span><small>XP</small></div>
+                <div><span id="levelValue">1</span><small>Level</small></div>
+            </div>
+        </header>
+
+        <section class="task-panel" aria-labelledby="taskTitle">
+            <div class="task-header">
+                <div>
+                    <p id="taskCategory" class="category">Ready</p>
+                    <h2 id="taskTitle">Generate your first task</h2>
+                </div>
+                <span id="taskDifficulty" class="badge">New</span>
+            </div>
+
+            <p id="taskText" class="task-text">Click Generate Task to get a small challenge that teaches you something while you do it.</p>
+
+            <div class="lesson-box">
+                <h3>Help</h3>
+                <p id="taskHelp">The lesson or tips for your task will appear here.</p>
+            </div>
+
+            <label for="submission">Paste or write your answer here</label>
+            <textarea id="submission" rows="7" placeholder="Paste your story, summary, research notes, or what you completed."></textarea>
+
+            <div class="controls">
+                <button id="generateBtn" type="button"><span class="button-icon" aria-hidden="true">Q</span>Generate Task</button>
+                <button id="reviewBtn" type="button"><span class="button-icon" aria-hidden="true">?</span>Review My Work</button>
+                <button id="completeBtn" type="button"><span class="button-icon" aria-hidden="true">OK</span>Complete</button>
+                <button id="cantNowBtn" type="button" class="secondary"><span class="button-icon" aria-hidden="true">!</span>Can't Now</button>
+            </div>
+        </section>
+
+        <section class="grid">
+            <div class="panel">
+                <h2>Add Your Own Task</h2>
+                <label for="customTask">Task</label>
+                <input id="customTask" type="text" placeholder="Organize my Downloads folder">
+                <label for="customHelp">Help text</label>
+                <input id="customHelp" type="text" placeholder="Sort files into folders and delete things you do not need.">
+                <button id="addTaskBtn" type="button"><span class="button-icon" aria-hidden="true">+</span>Add Task</button>
+            </div>
+
+            <div class="panel">
+                <h2>Postponed Tasks</h2>
+                <ul id="postponedList" class="list empty"><li>No postponed tasks yet.</li></ul>
+            </div>
+
+            <div class="panel">
+                <h2>Feedback</h2>
+                <div id="feedback" class="feedback">Finish a task and I will check it here.</div>
+            </div>
+
+            <div class="panel">
+                <h2>Task History</h2>
+                <ul id="historyList" class="list empty"><li>No completed tasks yet.</li></ul>
+            </div>
+        </section>
+    </main>
+
+    <dialog id="postponeDialog">
+        <form method="dialog" class="dialog-content">
+            <h2>When should this come back?</h2>
+            <p>Write something like "11:00 AM", "tomorrow", or "after dinner".</p>
+            <input id="postponeTime" type="text" placeholder="Around 11:00 AM">
+            <menu>
+                <button value="cancel" type="submit" class="secondary">Cancel</button>
+                <button id="savePostponeBtn" value="save" type="submit"><span class="button-icon" aria-hidden="true">!</span>Save</button>
+            </menu>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

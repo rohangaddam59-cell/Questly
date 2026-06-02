@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Questly logo">
+    <rect width="128" height="128" rx="24" fill="#237a5b"/>
+    <circle cx="64" cy="60" r="34" fill="#fff7e8"/>
+    <path d="M51 47c7-6 19-6 26 0s7 17 0 24c-7 6-19 6-26 0s-7-18 0-24z" fill="none" stroke="#2f63b7" stroke-width="8" stroke-linecap="round"/>
+    <path d="M76 72l15 15" stroke="#2f63b7" stroke-width="8" stroke-linecap="round"/>
+    <path d="M44 96h40" stroke="#c88b1f" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="93" cy="31" r="13" fill="#c88b1f"/>
+</svg>
